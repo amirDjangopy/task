@@ -23,13 +23,17 @@ numpy برای انجام عملیات ریاضیاتی مانند محاسبه 
 
 
 ```bash 
-token = "YOUR_HUGGINGFACE_TOKEN"
+token = "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" توکنی که از سایت HuggingFace گرفتم
 tokenizer = BertTokenizer.from_pretrained("bert-base-uncased", use_auth_token=token)
 model = BertModel.from_pretrained("bert-base-uncased", use_auth_token=token)
 BertTokenizer.from_pretrained توکنایزر BERT را بارگیری می‌کند.
 BertModel.from_pretrained مدل BERT را بارگیری می‌کند.
 ```
+  توکن 
 
+  ```bash
+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
+```
 
 5. تعریف تابع محاسبه شباهت کسینوسی
 این تابع شباهت کسینوسی بین دو بردار را محاسبه می‌کند.
