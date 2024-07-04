@@ -19,7 +19,9 @@ numpy برای انجام عملیات ریاضیاتی مانند محاسبه 
 یک توکن دسترسی از HuggingFace نیاز دارید که باید آن را جایگزین YOUR_HUGGINGFACE_TOKEN کنید. سپس مدل و توکنایزر BERT را بارگیری می‌کنیم.
 
 ```bash 
-token = "YOUR_HUGGINGFACE_TOKEN" tokenizer = BertTokenizer.from_pretrained("bert-base-uncased", use_auth_token=token) model = BertModel.from_pretrained("bert-base-uncased", use_auth_token=token) 
+token = "YOUR_HUGGINGFACE_TOKEN"
+tokenizer = BertTokenizer.from_pretrained("bert-base-uncased", use_auth_token=token)
+ model = BertModel.from_pretrained("bert-base-uncased", use_auth_token=token) 
 BertTokenizer.from_pretrained توکنایزر BERT را بارگیری می‌کند.
 BertModel.from_pretrained مدل BERT را بارگیری می‌کند.
 ```
