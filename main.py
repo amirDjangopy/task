@@ -3,7 +3,7 @@ import torch
 import numpy as np
 
 # بارگیری مدل و توکنایزر
-token = "YOUR_HUGGINGFACE_TOKEN"  # جایگزین کنید با توکن خود
+token = "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"  # جایگزین کنید با توکن خود
 tokenizer = BertTokenizer.from_pretrained("bert-base-uncased", use_auth_token=token)
 model = BertModel.from_pretrained("bert-base-uncased", use_auth_token=token)
 
