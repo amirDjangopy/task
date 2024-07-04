@@ -2,16 +2,10 @@ from transformers import BertModel, BertTokenizer
 import torch
 import numpy as np
 
-# تنظیم توکن HuggingFace
-token = "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"
-
-# بارگیری مدل و توکنایزر BERT با استفاده از توکن
+# بارگیری مدل و توکنایزر
+token = "YOUR_HUGGINGFACE_TOKEN"  # جایگزین کنید با توکن خود
 tokenizer = BertTokenizer.from_pretrained("bert-base-uncased", use_auth_token=token)
 model = BertModel.from_pretrained("bert-base-uncased", use_auth_token=token)
-
-# نمایش مدل و توکنایزر برای اطمینان از بارگیری صحیح
-print(model)
-print(tokenizer)
 
 # تابع محاسبه شباهت کسینوسی
 def cosine_similarity(a, b):
@@ -32,10 +26,20 @@ def calculate_bertscore(context, response, model, tokenizer):
     score = cosine_similarity(context_vector, response_vector)
     return score
 
-# مثال از داده‌ها
-context = "This is an example context."
-response = "This is an example response."
+# تابع محاسبه شباهت جاکارد
+def jaccard_similarity(query, document):
+    query_set = set(query.lower().split())
+    document_set = set(document.lower().split())
+    intersection = query_set.intersection(document_set)
+    union = query_set.union(document_set)
+    return len(intersection) / len(union)
 
-# محاسبه BERTScore
-score = calculate_bertscore(context, response, model, tokenizer)
-print("BERTScore:", score)
+if __name__ == "main":
+    context = "This is an example context."
+    response = "This is an example response."
+    
+    bert_score = calculate_bertscore(context, response, model, tokenizer)
+    jaccard_score = jaccard_similarity(context, response)
+    
+    print("BERTScore:", bert_score)
+    print("Jaccard Similarity:", jaccard_score)
