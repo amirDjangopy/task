@@ -29,7 +29,7 @@ model = BertModel.from_pretrained("bert-base-uncased", use_auth_token=token)
 BertTokenizer.from_pretrained توکنایزر BERT را بارگیری می‌کند.
 BertModel.from_pretrained مدل BERT را بارگیری می‌کند.
 ```
-  توکن 
+  توکن :
 
   ```bash
 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
