@@ -112,14 +112,8 @@ print("BERTScore:", bert_score) و print("Jaccard Similarity:", jaccard_score) �
 اجرای کد
 ابتدا مطمئن شوید که کتابخانه‌های مورد نیاز را نصب کرده‌اید.
 توکن دسترسی HuggingFace را در کد وارد کنید.
-فایل app.py را ذخیره کنید.
-در ترمینال خود دستور زیر را اجرا کنید:
 
 
-```bash
-Copy code
-python main.py
-```
 
 
 این کد نتیجه محاسبه BERTScore و شباهت جاکارد بین دو متن نمونه را چاپ می‌کند.
